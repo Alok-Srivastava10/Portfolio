@@ -1,8 +1,23 @@
-# React + Vite
+📌 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio repository! This project showcases my skills, experience, and projects in a modern, interactive, and responsive design.
 
-Currently, two official plugins are available:
+🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React.js - Frontend framework for building the UI
+
+React Hot Toast - For smooth and instant notifications
+
+Styled Components / CSS - For styling and responsive design
+
+🎨 Features
+
+🔹 Clean & Modern UI - Aesthetic and user-friendly interface
+
+📌 Project Showcase - Displays my best work with descriptions
+
+📱 Fully Responsive - Works across all devices
+
+📧 Contact Form - Get in touch easily
+
+🔔 React Hot Toast Integration - Instant feedback for user actions
