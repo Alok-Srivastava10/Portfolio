@@ -119,7 +119,8 @@ const Home = () => {
           {/* Get Resume Button */}
           <div className="flex justify-center md:justify-start mt-4">
             <a
-              href="https://drive.google.com/uc?export=download&id=1TJBD2GztHx9PTC4vch0cBc4eYUAjPiYt"
+              href="https://drive.google.com/uc?export=download&id=1TJBD2GztHx9PTC4vch0cBc4eYUAjPiYt
+"
               className="flex justify-center items-center px-5 py-2 bg-gradient-to-r from-pink-500 to-violet-600 text-white font-semibold rounded-full hover:scale-105 transition-transform w-fit"
             >
               Get Resume <FaDownload className="ml-2" size={18} />
