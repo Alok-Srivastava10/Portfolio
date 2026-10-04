@@ -42,6 +42,11 @@ if (!MONGODB_URI) {
   process.exit(1);
 }
 
+if (!ADMIN_EMAIL || !ADMIN_PASSWORD) {
+  console.error("Error: ADMIN_EMAIL and ADMIN_PASSWORD must be defined in .env.local.");
+  process.exit(1);
+}
+
 async function seed() {
   try {
     console.log("Connecting to MongoDB...");
@@ -61,9 +66,9 @@ async function seed() {
 
     // 2. Create Admin Account
     console.log("Creating Admin account...");
-    const passwordHash = await bcrypt.hash(ADMIN_PASSWORD, 10);
+    const passwordHash = await bcrypt.hash(ADMIN_PASSWORD!, 10);
     const admin = await Admin.create({
-      email: ADMIN_EMAIL,
+      email: ADMIN_EMAIL!,
       passwordHash: passwordHash,
     });
     console.log(`Admin user created: ${admin.email}`);
@@ -72,9 +77,10 @@ async function seed() {
     console.log("Creating Profile...");
     const profile = await Profile.create({
       name: "Alok Srivastava",
-      role: "Backend Engineer",
-      tagline: "Building scalable, high-performance backends and reactive microservices.",
-      summary: "Backend Developer at Tata Consultancy Services, specializing in Java, Spring Boot, and AEM (OSGi, Sling) with PostgreSQL. Experienced in building REST APIs and microservices. Solved 1000+ DSA problems, with a LeetCode peak rating of 1814 (Top 5%) and a top 1% finish in TCS CodeVita 2024.",
+      role: "Backend Developer",
+      tagline: "Building reliable, well-tested backend systems with Java and Spring Boot.",
+      summary:
+        "Backend Developer at Tata Consultancy Services, specializing in Java, Spring Boot, and AEM (OSGi, Sling) with PostgreSQL. Experienced in building REST APIs and microservices, with JUnit and Mockito test coverage of 95-98%. Solved 1000+ DSA problems, with a LeetCode peak rating of 1814 (Top 5%) and a top 1% finish in TCS CodeVita 2024.",
       email: "alok27141@gmail.com",
       phone: "+91 7380888600",
       location: "Lucknow, Uttar Pradesh, India",
@@ -82,8 +88,6 @@ async function seed() {
         linkedin: "https://www.linkedin.com/in/alok-srivastava-1651462b9",
         github: "https://github.com/Alok-Srivastava10",
         leetcode: "https://leetcode.com/u/ALOK_SRIVASTAVA/",
-        gfg: "https://geeksforgeeks.org/user/alok-srivastava-placeholder",
-        twitter: "https://twitter.com/alok-srivastava-placeholder",
       },
       profileImageUrl: "",
       resumeUrl: "",
@@ -97,12 +101,12 @@ async function seed() {
     const skillsData = [
       {
         category: "Backend Development",
-        skills: ["Java", "Spring Boot", "Spring WebFlux", "Spring Security", "REST APIs", "JPA", "Hibernate", "Microservices"],
+        skills: ["Java", "Spring Boot", "Spring Data JPA", "Spring Security", "REST APIs", "Microservices", "AEM", "OSGi", "Sling", "Node.js", "Express.js"],
         order: 1,
       },
       {
         category: "Frontend Development",
-        skills: ["React.js", "Redux", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
+        skills: ["React.js", "JavaScript", "HTML", "CSS"],
         order: 2,
       },
       {
@@ -112,7 +116,7 @@ async function seed() {
       },
       {
         category: "Tools & Practices",
-        skills: ["Git", "GitHub", "Gitlab", "Maven", "Postman", "Jenkins", "GitHub Copilot"],
+        skills: ["Git", "GitHub", "GitLab", "Maven", "Postman", "Jenkins", "SonarQube"],
         order: 4,
       },
       {
@@ -137,13 +141,13 @@ async function seed() {
         role: "Backend Developer",
         startDate: "April 2026",
         endDate: "Present",
-        techTags: ["Java", "Spring Boot", "AEM", "PostgreSQL","REST APIs", "SonarQube"],
+        techTags: ["Java", "Spring Boot", "AEM", "PostgreSQL", "REST APIs", "SonarQube"],
         bullets: [
           "Developed AEM backend components with OSGi and Sling, implementing business logic, backend validation, and application enhancements.",
           "Worked with PostgreSQL for data retrieval, validation, and troubleshooting as part of backend development.",
           "Wrote JUnit and Mockito tests, cutting post-release issues and raising test coverage to 95-98%.",
           "Developed and maintained Java and Spring Boot microservices for the Marketing Tower, applying Spring Data JPA, multithreading, concurrency, and design patterns to improve performance.",
-          "Led sprint planning, user story refinement, and cross-functional deliverables as Scrum Master (Backup PM), facilitating core Agile ceremonies to keep team velocity and delivery predictable."
+          "Led sprint planning, user story refinement, and cross-functional deliverables as Scrum Master (Backup PM), facilitating core Agile ceremonies to keep team velocity and delivery predictable.",
         ],
         order: 1,
       },
@@ -154,34 +158,34 @@ async function seed() {
     // 6. Create Projects
     console.log("Creating Projects...");
     const projectsData = [
-  {
-    title: "JWT Authentication System",
-    techTags: ["Java", "Spring Boot", "Spring Security", "MySQL"],
-    bullets: [
-      "Designed and implemented a JWT-based authentication system with secure login/logout flow, reducing unauthorized access attempts by 50% in testing.",
-      "Integrated token expiration and refresh logic, improving session security and API reliability.",
-      "Conducted performance testing on 20+ API endpoints, keeping average response times under 200 ms."
-    ],
-    githubUrl: "https://github.com/Alok-Srivastava10/Implementation-of-JWT-Authentication",
-    liveUrl: "",
-    featured: true,
-    order: 1,
-  },
-  {
-    title: "ScholarFusion",
-    techTags: ["Node.js", "Express.js", "MongoDB", "JWT", "Nodemailer", "Cloudinary"],
-    bullets: [
-      "Implemented secure user authentication with JWT.",
-      "Integrated Cloudinary for media uploads.",
-      "Enabled email notifications and password recovery through Nodemailer.",
-      "Built personalized dashboards for students and educators to manage uploaded content securely."
-    ],
-    githubUrl: "https://github.com/Alok-Srivastava10/Scholar-Fusion",
-    liveUrl: "",
-    featured: true,
-    order: 2,
-  },
-];
+      {
+        title: "JWT Authentication System",
+        techTags: ["Java", "Spring Boot", "Spring Security", "MySQL"],
+        bullets: [
+          "Designed and implemented a JWT-based authentication system with secure login/logout flow, reducing unauthorized access attempts by 50% in testing.",
+          "Integrated token expiration and refresh logic, improving session security and API reliability.",
+          "Conducted performance testing on 20+ API endpoints, keeping average response times under 200 ms.",
+        ],
+        githubUrl: "https://github.com/Alok-Srivastava10/Implementation-of-JWT-Authentication",
+        liveUrl: "",
+        featured: true,
+        order: 1,
+      },
+      {
+        title: "ScholarFusion",
+        techTags: ["Node.js", "Express.js", "MongoDB", "JWT", "Nodemailer", "Cloudinary"],
+        bullets: [
+          "Implemented secure user authentication with JWT.",
+          "Integrated Cloudinary for media uploads.",
+          "Enabled email notifications and password recovery through Nodemailer.",
+          "Built personalized dashboards for students and educators to manage uploaded content securely.",
+        ],
+        githubUrl: "https://github.com/Alok-Srivastava10/Scholar-Fusion",
+        liveUrl: "",
+        featured: true,
+        order: 2,
+      },
+    ];
     await Project.insertMany(projectsData);
     console.log("Projects seeded.");
 
