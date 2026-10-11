@@ -101,7 +101,7 @@ Use this as the **seed data** / first admin entry so the site isn't empty on fir
 - Email: alok27141@gmail.com
 - Location: Lucknow, Uttar Pradesh, India
 - Links: LinkedIn (https://www.linkedin.com/in/alok-srivastava-1651462b9), GitHub (https://github.com/Alok-Srivastava10), LeetCode (https://leetcode.com/u/ALOK_SRIVASTAVA/). GFG and Twitter are not set; leave them empty (editable in dashboard)
-- Summary: Backend Developer at Tata Consultancy Services, specializing in Java, Spring Boot, and AEM (OSGi, Sling) with PostgreSQL. Experienced in building REST APIs and microservices, with JUnit and Mockito test coverage of 95-98%. Solved 1000+ DSA problems, with a LeetCode peak rating of 1814 (Top 5%) and a top 1% finish in TCS CodeVita 2024.
+- Summary: Backend Developer at Tata Consultancy Services, specializing in Java, Spring Boot, and AEM (OSGi, Sling) with PostgreSQL. Experienced in building REST APIs and microservices, with JUnit and Mockito test coverage of 95-98%. Solved 1000+ DSA problems, with a LeetCode peak rating of 1884 (Top 5%) and a top 1% finish in TCS CodeVita 2024.
 
 **Skills** (group by category)
 - Backend Development: Java, Spring Boot, Spring Data JPA, Spring Security, REST APIs, Microservices, AEM, OSGi, Sling, Node.js, Express.js
@@ -138,7 +138,7 @@ Use this as the **seed data** / first admin entry so the site isn't empty on fir
 
 **Achievements**
 - Ranked in the top 1% in TCS CodeVita 2024 among 550,000+ participants globally.
-- Peak rating: 1814 on LeetCode (Top 5%), 1407 (2★) on CodeChef.
+- Peak rating: 1884 on LeetCode (Top 5%), 1407 (2★) on CodeChef.
 - Global Rank 220, 404 in LeetCode Contests among 40,000+ participants.
 - Solved 1000+ DSA problems across LeetCode, CodeChef, CodeForces and GeeksforGeeks.
 
@@ -305,7 +305,7 @@ Use Zod schemas per resource for request validation; return consistent `{ succes
 ## 8. Public Site — Section-by-Section Spec (v2, elevated)
 
 1. **Nav bar** — sticky, transparent-to-solid on scroll, links to each section, active-section highlight with an animated underline/indicator (not just a color swap), resume download button (primary accent), mobile hamburger menu with slide-in drawer with staggered link entrance.
-2. **Hero** — Name (large display font, fluid type scale), role/title, one-line tagline, two CTAs ("Download Resume", "Contact Me") — **no availability/status badge of any kind**. Subtle animated background (soft gradient blob/mesh or fine noise texture) behind the text for depth. Staggered entrance animation (fade+slide-up on load, not on every scroll). Optional: animated stat counters (e.g. "95%+ test coverage", "1814 LeetCode peak rating", "1000+ DSA problems solved") as a secondary Hero element.
+2. **Hero** — Name (large display font, fluid type scale), role/title, one-line tagline, two CTAs ("Download Resume", "Contact Me") — **no availability/status badge of any kind**. Subtle animated background (soft gradient blob/mesh or fine noise texture) behind the text for depth. Staggered entrance animation (fade+slide-up on load, not on every scroll). Optional: animated stat counters (e.g. "95%+ test coverage", "1884 LeetCode peak rating", "1000+ DSA problems solved") as a secondary Hero element.
 3. **About/Summary** — profile summary paragraph, optionally profile photo with a subtle accent-colored frame/offset shape behind it, animated on scroll-into-view (fade+slide, once only — don't re-trigger on scroll up/down repeatedly).
 4. **Experience** — vertical timeline with an animated accent-colored connecting line that draws in on scroll, or clean stacked cards with layered shadow and a colored left-border accent; company, role, duration, tech tags as small pills, bullet achievements. Reveal each item on scroll with slight stagger, direction varying slightly from the Projects section for visual variety.
 5. **Projects** — grid of cards (2–3 columns desktop, 1 mobile); each card: title, tech tags, 2–3 top bullets, GitHub/live links with icon buttons; hover = lift + soft layered shadow + subtle accent-colored glow/border, no tilt/3D gimmicks. Featured project can get a slightly larger card or a gradient border treatment to stand out.

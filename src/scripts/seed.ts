@@ -80,7 +80,7 @@ async function seed() {
       role: "Backend Developer",
       tagline: "Building reliable, well-tested backend systems with Java and Spring Boot.",
       summary:
-        "Backend Developer at Tata Consultancy Services, specializing in Java, Spring Boot, and AEM (OSGi, Sling) with PostgreSQL. Experienced in building REST APIs and microservices, with JUnit and Mockito test coverage of 95-98%. Solved 1000+ DSA problems, with a LeetCode peak rating of 1814 (Top 5%) and a top 1% finish in TCS CodeVita 2024.",
+        "Backend Developer at Tata Consultancy Services, specializing in Java, Spring Boot, and AEM (OSGi, Sling) with PostgreSQL. Experienced in building REST APIs and microservices, with JUnit and Mockito test coverage of 95-98%. Solved 1000+ DSA problems, with a LeetCode peak rating of 1884 (Top 5%) and a top 1% finish in TCS CodeVita 2024.",
       email: "alok27141@gmail.com",
       phone: "+91 7380888600",
       location: "Lucknow, Uttar Pradesh, India",
@@ -193,8 +193,8 @@ async function seed() {
     console.log("Creating Achievements...");
     const achievementsData = [
       { text: "Ranked in the top 1% in TCS CodeVita 2024 among 550,000+ participants globally.", order: 1 },
-      { text: "Peak rating: 1814 on LeetCode (Top 5%), 1407 (2★) on CodeChef.", order: 2 },
-      { text: "Global Rank 220, 404 in LeetCode Contests among 40,000+ participants.", order: 3 },
+      { text: "Peak rating: 1884 on LeetCode (Top 5%), 1407 (2★) on CodeChef.", order: 2 },
+      { text: "Global Rank 220, 404 and 431 in LeetCode Contests among 40,000+ participants.", order: 3 },
       { text: "Solved 1000+ DSA problems across LeetCode, CodeChef, CodeForces and GeeksforGeeks.", order: 4 },
     ];
     await Achievement.insertMany(achievementsData);

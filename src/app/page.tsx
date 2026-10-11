@@ -45,7 +45,7 @@ async function getPortfolioData() {
         summary: "Backend Developer specializing in Java, Spring Boot, React, and MongoDB.",
         email: "alok27141@gmail.com",
         phone: "+91 7380888600",
-        location: "Noida, India",
+        location: "Lucknow, India",
         socials: {
           linkedin: "",
           github: "",

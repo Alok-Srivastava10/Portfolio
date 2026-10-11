@@ -377,7 +377,7 @@ export default function PortfolioClient({ data }: PortfolioProps) {
               <div className="grid grid-cols-2 gap-6 pt-6 border-t border-gray-100">
                 <div className="space-y-1">
                   <div className="text-4xl font-serif font-black text-accent">
-                    <Counter value={1814} />
+                    <Counter value={1884} />
                   </div>
                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">LeetCode Peak Rating</p>
                 </div>
